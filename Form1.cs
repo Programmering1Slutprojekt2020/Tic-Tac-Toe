@@ -19,6 +19,40 @@ namespace Tic_Tac_Toe
 
         int count = 0; //för att hålla reda vems tur det är
 
+        void checkwinner(string symbol)
+        {
+            if (button1.Text==symbol && button2.Text == symbol && button3.Text == symbol) //x1
+            {
+                MessageBox.Show(symbol+" Won the game");
+            }
+            else if(button4.Text == symbol && button5.Text == symbol && button6.Text == symbol) //x2
+            {
+                    MessageBox.Show(symbol + " Won the game");
+                }
+            else if (button7.Text == symbol && button8.Text == symbol && button9.Text == symbol) //x3
+            {
+                MessageBox.Show(symbol + " Won the game");
+            }
+            //alla i xled
+            else if (button1.Text == symbol && button4.Text == symbol && button7.Text == symbol) //y1
+            {
+                MessageBox.Show(symbol + " Won the game");
+            }
+            else if (button2.Text == symbol && button5.Text == symbol && button8.Text == symbol) //y2
+            {
+                MessageBox.Show(symbol + " Won the game");
+            }
+            else if (button3.Text == symbol && button6.Text == symbol && button9.Text == symbol) //y3
+            {
+                MessageBox.Show(symbol + " Won the game");
+            }
+            //alla i y led
+            else if (button1.Text == symbol && button5.Text == symbol && button9.Text == symbol) //y3
+            {
+                MessageBox.Show(symbol + " Won the game");
+            }
+        }
+
         void fnsymbol(object senderobj)
         {
             string buttontxt = ((Button)senderobj).Text;
@@ -34,6 +68,8 @@ namespace Tic_Tac_Toe
                 }
 
                 count++;//ökar så att dte blir nästa omgång
+                checkwinner("0");
+                checkwinner("X");
             }
             else 
             {
