@@ -19,37 +19,49 @@ namespace Tic_Tac_Toe
 
         int count = 0; //för att hålla reda vems tur det är
 
+        void restartgame()
+        {
+            Application.Restart();
+        } 
+
         void checkwinner(string symbol)
         {
             if (button1.Text==symbol && button2.Text == symbol && button3.Text == symbol) //x1
             {
                 MessageBox.Show(symbol+" Won the game");
+                restartgame();
             }
             else if(button4.Text == symbol && button5.Text == symbol && button6.Text == symbol) //x2
             {
-                    MessageBox.Show(symbol + " Won the game");
-                }
+                MessageBox.Show(symbol + " Won the game");
+                restartgame();
+            }
             else if (button7.Text == symbol && button8.Text == symbol && button9.Text == symbol) //x3
             {
                 MessageBox.Show(symbol + " Won the game");
+                restartgame();
             }
             //alla i xled
             else if (button1.Text == symbol && button4.Text == symbol && button7.Text == symbol) //y1
             {
                 MessageBox.Show(symbol + " Won the game");
+                restartgame();
             }
             else if (button2.Text == symbol && button5.Text == symbol && button8.Text == symbol) //y2
             {
                 MessageBox.Show(symbol + " Won the game");
+                restartgame();
             }
             else if (button3.Text == symbol && button6.Text == symbol && button9.Text == symbol) //y3
             {
                 MessageBox.Show(symbol + " Won the game");
+                restartgame();
             }
             //alla i y led
-            else if (button1.Text == symbol && button5.Text == symbol && button9.Text == symbol) //y3
+            else if (button1.Text == symbol && button5.Text == symbol && button9.Text == symbol) //deagonalt
             {
                 MessageBox.Show(symbol + " Won the game");
+                restartgame();
             }
         }
 
@@ -124,6 +136,16 @@ namespace Tic_Tac_Toe
         private void button9_Click(object sender, EventArgs e)
         {
             fnsymbol(sender);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
