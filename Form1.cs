@@ -19,50 +19,100 @@ namespace Tic_Tac_Toe
 
         int count = 0; //för att hålla reda vems tur det är
 
+        string wincache = ""; //cache för att se vem som fick poäng senast
+        int winp1 = 0; //spelare 1 score
+        int winp2 = 0; //spelare 2 score
+
         void restartgame()
         {
-            Application.Restart();
+            foreach (Button btn in this.Controls.OfType<Button>()) //alla knappar som används blir tomma
+            {
+                btn.Text = "";
+            }
+            button10.Text = "Restart";//lägger till så att restart blir restart och inte tom
+            count = 0; // återställa omgång
+        }
+
+        void winner(object symbol) //skriver utt vinnaren 
+        {
+            string playerwin = "Player 1";
+            if (symbol == "X")
+            {
+                playerwin = "Player 2";
+            }
+            MessageBox.Show(playerwin + " won the game!");
         } 
 
         void checkwinner(string symbol)
         {
             if (button1.Text==symbol && button2.Text == symbol && button3.Text == symbol) //x1
             {
-                MessageBox.Show(symbol+" Won the game");
+                winner(symbol); //skickar bikstaven till metoiden som skriver ut vinnaren
+                wincache = symbol; // wincache får x eller 0 beroende vem som vann
                 restartgame();
             }
             else if(button4.Text == symbol && button5.Text == symbol && button6.Text == symbol) //x2
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
             else if (button7.Text == symbol && button8.Text == symbol && button9.Text == symbol) //x3
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
             //alla i xled
             else if (button1.Text == symbol && button4.Text == symbol && button7.Text == symbol) //y1
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
             else if (button2.Text == symbol && button5.Text == symbol && button8.Text == symbol) //y2
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
             else if (button3.Text == symbol && button6.Text == symbol && button9.Text == symbol) //y3
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
             //alla i y led
             else if (button1.Text == symbol && button5.Text == symbol && button9.Text == symbol) //deagonalt
             {
-                MessageBox.Show(symbol + " Won the game");
+                winner(symbol);
+                wincache = symbol;
                 restartgame();
             }
+            else if (button3.Text == symbol && button5.Text == symbol && button7.Text == symbol) //deagonalt
+            {
+                winner(symbol);
+                wincache = symbol;
+                restartgame();
+            }
+            else
+            {
+                wincache = ""; // nollställa cache
+            }
+        }
+
+        void score()
+        {
+            if (wincache == "0")
+            {
+                winp1++;
+            }
+            else if (wincache == "X")
+            {
+                winp2++;
+            }
+            ScoreP1.Text = ("Score:  " + winp1); //uppdaterar scoreboard
+            ScoreP2.Text = ("Score:  " + winp2);
         }
 
         void fnsymbol(object senderobj)
@@ -80,22 +130,27 @@ namespace Tic_Tac_Toe
                 }
 
                 count++;//ökar så att dte blir nästa omgång
+
                 checkwinner("0");
+                score();
                 checkwinner("X");
+                score();
+
+                if (count == 9) //alla rutor är fulla
+                {
+                    MessageBox.Show("Draw, try again!");
+                    restartgame();
+                }
             }
             else 
             {
-                MessageBox.Show("Invalid Click");
+                MessageBox.Show("Invalid Click!");
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             fnsymbol(sender);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -140,7 +195,7 @@ namespace Tic_Tac_Toe
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            restartgame();
         }
 
         private void Form1_Load(object sender, EventArgs e)

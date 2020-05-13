@@ -41,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.ScoreP1 = new System.Windows.Forms.Label();
+            this.ScoreP2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -142,13 +144,12 @@
             this.label1.Size = new System.Drawing.Size(185, 36);
             this.label1.TabIndex = 9;
             this.label1.Text = "Player 1 = 0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(481, 139);
+            this.label2.Location = new System.Drawing.Point(478, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 36);
             this.label2.TabIndex = 10;
@@ -158,19 +159,41 @@
             // 
             this.button10.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.Red;
-            this.button10.Location = new System.Drawing.Point(487, 207);
+            this.button10.Location = new System.Drawing.Point(484, 278);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(179, 43);
+            this.button10.Size = new System.Drawing.Size(182, 47);
             this.button10.TabIndex = 11;
             this.button10.Text = "Restart";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // ScoreP1
+            // 
+            this.ScoreP1.AutoSize = true;
+            this.ScoreP1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreP1.Location = new System.Drawing.Point(481, 124);
+            this.ScoreP1.Name = "ScoreP1";
+            this.ScoreP1.Size = new System.Drawing.Size(131, 33);
+            this.ScoreP1.TabIndex = 12;
+            this.ScoreP1.Text = "Score:  0";
+            // 
+            // ScoreP2
+            // 
+            this.ScoreP2.AutoSize = true;
+            this.ScoreP2.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreP2.Location = new System.Drawing.Point(478, 217);
+            this.ScoreP2.Name = "ScoreP2";
+            this.ScoreP2.Size = new System.Drawing.Size(131, 33);
+            this.ScoreP2.TabIndex = 13;
+            this.ScoreP2.Text = "Score:  0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 594);
+            this.Controls.Add(this.ScoreP2);
+            this.Controls.Add(this.ScoreP1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -207,6 +230,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label ScoreP1;
+        private System.Windows.Forms.Label ScoreP2;
     }
 }
 
