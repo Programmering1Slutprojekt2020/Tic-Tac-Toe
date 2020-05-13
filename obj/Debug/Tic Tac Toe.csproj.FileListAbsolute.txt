@@ -7,3 +7,13 @@ C:\Users\erikm\source\repos\Tic Tac Toe\Tic Tac Toe\obj\Debug\Tic_Tac_Toe.Proper
 C:\Users\erikm\source\repos\Tic Tac Toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.GenerateResource.cache
 C:\Users\erikm\source\repos\Tic Tac Toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.exe
 C:\Users\erikm\source\repos\Tic Tac Toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.pdb
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\bin\Debug\Tic Tac Toe.exe.config
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\bin\Debug\Tic Tac Toe.exe
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\bin\Debug\Tic Tac Toe.pdb
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic Tac Toe.csprojAssemblyReference.cache
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic_Tac_Toe.Form1.resources
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic_Tac_Toe.Properties.Resources.resources
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic Tac Toe.csproj.GenerateResource.cache
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic Tac Toe.csproj.CoreCompileInputs.cache
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic Tac Toe.exe
+C:\Users\0119alan\Documents\Spel\Tic-Tac-Toe\obj\Debug\Tic Tac Toe.pdb

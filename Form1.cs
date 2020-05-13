@@ -136,7 +136,7 @@ namespace Tic_Tac_Toe
                 checkwinner("X");
                 score();
 
-                if (count == 9) //alla rutor är fulla
+                if (count > 8) //alla rutor är fulla
                 {
                     MessageBox.Show("Draw, try again!");
                     restartgame();
